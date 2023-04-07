@@ -14,5 +14,9 @@ You can do the basic maths like adding, subtraction, multiplication, division.
 * Git
 * Github
 
+### API's
+* Iconscout - Icons
+* Google Fonts - Font
+
 ## Live Preview Link
 __Will be Available Soon__

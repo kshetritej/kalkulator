@@ -14,8 +14,8 @@
   --color-red : #ef233c;
   --color-yellow: #f77f00;
   --color-lemon: #95d5b2;
+  --color-green: #16db65;
 }
-
 .container{
   background-color: var(--primary-dark);
   display: flex;
@@ -47,14 +47,13 @@
   border-radius: 0.2em;
   background-color: var(--color-lemon);
 }
-
 .row-btns{
   display: flex;
   gap: 0.2rem;
   padding: 0.3rem 0;
 }
 .btn-div > div{
-  background-color: var(--color-white);
+  color: var(--color-white);
   padding: 1rem;
   height: 50px;
   width: 70px;
@@ -68,4 +67,25 @@
 .calc-btn-container{
   margin: 0.5rem 0;
 }
-
+.clear-btn{
+  background-color:var(--color-yellow);
+}
+.operator{
+  background-color: var(--primary-dark);
+}
+.dummy-power-btn{
+  background-color: var(--color-red);
+}
+.equal-btn{
+  background-color: var(--color-green);
+}
+.num{
+  background-color: var(--secondary-dark);
+}
+.copy{
+  color: var(--color-white);
+  margin: 3rem 0 0;
+}
+a{
+  color:var(--color-white);
+}
