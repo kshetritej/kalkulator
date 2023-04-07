@@ -1,13 +1,18 @@
-#Calculator
-This repository is created mainly for the TOP project.
+# Kalculator
+
+This repository is created mainly for the ** TOP project ** .
 You can do the basic maths like adding, subtraction, multiplication, division.
 
-##Technology Used
-1. HTML
-2. CSS
-3. JavScript
+## Technologies Used
+### Languages
+* HTML
+* CSS
+* JavaScript
 
-##Live Preview Link
-<a>Here</a>
+### Tools
+* Visual Studio Code
+* Git
+* Github
 
-<strong>kshetritej</strong>
+## Live Preview Link
+** Will be Available Soon
