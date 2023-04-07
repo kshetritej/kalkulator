@@ -1,6 +1,6 @@
 # Kalculator
 
-This repository is created mainly for the ** TOP project ** .
+This repository is created mainly for the __TOP project__ .
 You can do the basic maths like adding, subtraction, multiplication, division.
 
 ## Technologies Used
@@ -15,4 +15,4 @@ You can do the basic maths like adding, subtraction, multiplication, division.
 * Github
 
 ## Live Preview Link
-** Will be Available Soon
+__Will be Available Soon__
