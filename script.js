@@ -47,17 +47,6 @@ function operate(operator, firstNumber, secondNumber) {
 
 //? Display Value
 
-// const numberButtons = document.querySelectorAll("#btn");
-// function populateDisplay() {
-//   numberButtons.forEach(number => {
-//     number.addEventListener("click", () => {
-//       const value = number.textContent;
-//       console.log(value); 
-//       updateDisplay(value);
-//     });
-//   });
-// }
-
 const buttons = document.querySelectorAll("#btn");
 const screen = document.querySelector(".calc-screen");
 
@@ -67,9 +56,15 @@ function populate(){
     button.addEventListener("click",()=>{
       let value = button.textContent;
       screen.textContent += value;
+      const displayValue = screen.textContent;
+      getValue(displayValue);
       console.log(value);
     });
   });
 }
+
 populate(); // can populate screen but not as intended
 
+function getValue(value){
+  return value;
+}
