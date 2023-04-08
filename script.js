@@ -19,15 +19,18 @@ const percentageBtn = document.querySelector(".percentage-btn");
 const buttons = document.querySelectorAll("#btn");
 
 clearBtn.addEventListener("click",()=>{
-
+  calcDisplay.textContent= "0";
 })
 
 
 
-buttons.forEach(button => {
-  button.addEventListener("click",()=>{
-    input = button.textContent;
-    console.log(input); //returns clicked number in console
-    return input;
+function getInput(){
+  buttons.forEach(button => {
+    button.addEventListener("click",()=>{
+      input = button.textContent;
+      return input;
+    });
   });
-});
+}
+
+console.log(getInput());
