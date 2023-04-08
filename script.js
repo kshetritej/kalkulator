@@ -43,6 +43,9 @@ function operate(operator,firstNumber,secondNumber){
 }
 // console.log(operate("+",3,3)); //
 
+const screen = document.querySelector(".calc-screen");
+screen.textContent = defaultScreenValue;
+
 function updateDisplay(){
 
 }
