@@ -20,51 +20,94 @@ function divide(a, b) {
 }
 
 
-let firstNumber = "";
+
+let a = "";
 let operator = "";
-let secondNumber = "";
+let b = "";
+const defaultValue = "0";
 
-let defaultScreenValue = '0';
-
-
-function operate(operator, firstNumber, secondNumber) {
+function operate(operator, a, b) {
   switch (operator) {
     case "+":
-      return add(firstNumber, secondNumber);
+      return add(a, b);
     case "-":
-      return subtract(firstNumber, secondNumber);
+      return subtract(a, b);
     case "*":
-      return multiply(firstNumber, secondNumber);
+      return multiply(a, b);
     case "/":
-      return divide(firstNumber, secondNumber);
+      return divide(a, b);
+    case "%":
+      return percentage(a,b);
     default:
       return "HUH!"
   }
 }
-// console.log(operate("+",3,3)); //
+
+//clear btn
+const clearBtn = document.querySelector(".clear-btn");
+clearBtn.addEventListener("click", () => {
+  screen.textContent = "O";
+  a = "";
+  b = "";
+  operator = "";
+});
 
 
-
-//? Display Value
-
-const buttons = document.querySelectorAll("#btn");
+// number buttons
+const numberButtons = document.querySelectorAll("#btn");
 const screen = document.querySelector(".calc-screen");
-
-
-function populate(){
-  buttons.forEach(button => {
-    button.addEventListener("click",()=>{
-      let value = button.textContent;
-      screen.textContent += value;
-      const displayValue = screen.textContent;
-      getValue(displayValue);
-      console.log(value);
-    });
+numberButtons.forEach(numberButton => {
+  numberButton.addEventListener("click", () => {
+    let screenValue = screen.textContent;
+    
+    if (screenValue === "O") {
+      screen.textContent = numberButton.textContent;
+    } else {
+      screen.textContent += numberButton.textContent;
+    }
+    
+    //if operator is not present the entered value will be 
+    //stored as 'a' while if 'operator' is present entered value
+    //will be treated as second number
+    if (!operator) {
+      a = screen.textContent; // a is first Number
+    } else {
+      b = screen.textContent; // b is second Number
+    }
   });
-}
+});
 
-populate(); // can populate screen but not as intended
+// operator buttons
+const operatorButtons = document.querySelectorAll(".operator");
+operatorButtons.forEach(operatorButton => {
+  operatorButton.addEventListener("click", () => {
+    operator = operatorButton.textContent;
+    if (a) {
+      // if there's a first number, store it and clear the screen
+      storedValue = a;
+      screen.textContent = "";
+    } else {
+      // otherwise, set the default value for a as defaultValue which is '0'
+      storedValue = defaultValue;
+    }
+  });
+});
 
-function getValue(value){
-  return value;
-}
+// equal button
+const equalButton = document.querySelector(".equal-btn");
+equalButton.addEventListener("click", () => {
+  if (a && b && operator) {
+    // perform the calculation
+    const result = operate(operator, Number(a), Number(b));
+    
+    // update the screen with the result
+    screen.textContent = result;
+    
+    // store the result as the first number for the next calculation
+    a = result;
+    
+    // clear the second number and operator
+    b = "";
+    operator = "";
+  }
+});
