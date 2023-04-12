@@ -27,6 +27,7 @@
 
 .calc-body{
   width: 25%;
+  height: 75%;
   background-color: var(--ternary-dark);
   padding: 1rem;
   border-radius: 0.5em;
