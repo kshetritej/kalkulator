@@ -19,4 +19,4 @@ You can do the basic maths like adding, subtraction, multiplication, division.
 * Google Fonts - Font
 
 ## Live Preview Link
- [Click Here] : smile :(https://kshetritej.github.io/kalkulator)
+ [Click Here](https://kshetritej.github.io/kalkulator) 😀
