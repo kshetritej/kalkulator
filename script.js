@@ -63,7 +63,6 @@ that is input into the calculator when a user presses an operator,
   operatorButton.addEventListener("click",()=>{
     operator = operatorButton.textContent;
     screen.textContent = "";
-
   });
  });
 
@@ -90,7 +89,12 @@ function multiplication(a, b) {
 }
 
 function division(a, b) {
-  a === 0 ? "lol" : a / b;
+  if(a === 0){
+    return "Lol";
+  }
+  else{
+    return a/b;
+  }
 }
 
 function operate(operator, firstNumber, secondNumber) {
