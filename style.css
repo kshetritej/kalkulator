@@ -26,6 +26,8 @@
 }
 
 .calc-body{
+  width: 300px;
+  height: 500px;
   background-color: var(--ternary-dark);
   padding: 1rem;
   border-radius: 0.5em;
@@ -51,39 +53,43 @@
   border-radius: 0.2em;
   background-color: var(--color-lemon);
 }
-.row-btns{
+.calc-buttons-container{
+  margin: 0.5rem 0;
   display: flex;
-  gap: 0.2rem;
-  padding: 0.3rem 0;
+  flex-wrap: wrap;
+
 }
-.btn-div > div{
+.clear-btn-container{
+  width: 100%;
+}
+button{
+  width: 25%;
+  height: 25%;
+  font-size: 25px;
   color: var(--color-white);
-  padding: 1rem;
-  height: 50px;
-  width: 70px;
-  text-align: center;
-  justify-content: space-between;
-  border-radius: 0.3em;
+  border: 0.5px solid var(--primary-dark);
+  padding: 1rem 0;
 }
-.btn-div > div:hover{
+#equal-btn{
+  width: 50%;
+  background-color: var(--color-green);
+
+}
+button:hover{
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-.calc-btn-container{
-  margin: 0.5rem 0;
-}
-.clear-btn{
+
+#clear-btn{
   background-color:var(--color-yellow);
 }
-.operator{
+#operator{
   background-color: var(--primary-dark);
 }
-.dummy-power-btn{
+/* .dummy-power-btn{
   background-color: var(--color-red);
-}
-.equal-btn{
-  background-color: var(--color-green);
-}
-.num{
+} */
+
+.btn{
   background-color: var(--secondary-dark);
 }
 .copy{
