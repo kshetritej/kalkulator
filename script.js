@@ -32,11 +32,35 @@ numberButtons.forEach(numberButton => {
       displayValue = screen.textContent;
     }
 
-    displayValue =screen.textContent;
+    displayValue =screen.textContent; //store the value in displayValue variable
 
     calculate();
   });
 });
+
+
+function calculate(){
+  if(!operator){
+    firstNumber = displayValue;
+    if(firstNumber){
+      secondNumber = displayValue
+    }
+    // console.log(firstNumber);
+  }
+  if(operator && firstNumber){
+    displayValue = screen.textContent;
+    secondNumber = displayValue;
+    console.log(secondNumber);
+  }
+  if(operator && firstNumber  && secondNumber){
+    result = operate(operator, Number(firstNumber),Number(secondNumber));
+    screen.textContent = result;
+
+    firstNumber = result;
+    operator = "";
+    secondNumber = "";
+  }
+}
 
 /*Make the calculator work! 
 You’ll need to store the first number 
@@ -52,30 +76,27 @@ that is input into the calculator when a user presses an operator,
   });
  });
 
- function calculate(){
-  if(!operator){
-    firstNumber = displayValue;
-    console.log(firstNumber);
-  }
-  if(operator && firstNumber){
-    secondNumber = displayValue;
-    console.log(secondNumber);
-  }
-  if(operator && firstNumber  && secondNumber){
-    result = operate(operator, Number(firstNumber),Number(secondNumber));
-    screen.textContent = result;
-
-    firstNumber = result;
-    operator = "";
-    secondNumber = "";
-  }
-
- }
  //Equal Button
  const equalButton = document.querySelector("#equal-btn");
  equalButton.addEventListener("click",()=>{
-  calculate();
+  if(screen.textContent != result){
+    calculate();
+  }
  })
+
+ //Decimal Button
+ const decimalButton = document.querySelector("#decimal-btn");
+ decimalButton.addEventListener("click",()=>{
+  displayValue = screen.textContent
+  if(displayValue.includes(".")){
+    screen.textContent = displayValue;
+    // console.log(displayValue);
+  }
+  else{
+    screen.textContent = displayValue + ".";
+    // console.log(displayValue);
+  }
+ });
 
 //  Operation functions
 function addition(a, b) {
