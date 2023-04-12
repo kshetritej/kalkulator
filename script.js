@@ -33,22 +33,7 @@ numberButtons.forEach(numberButton => {
     }
     displayValue =screen.textContent;
 
-    if(!operator){
-      firstNumber = displayValue;
-      console.log(firstNumber);
-    }
-    if(operator && firstNumber){
-      secondNumber = displayValue;
-      console.log(secondNumber);
-    }
-    if(operator && firstNumber  && secondNumber){
-      result = operate(operator, Number(firstNumber),Number(secondNumber));
-      screen.textContent = result;
-
-      firstNumber = result;
-      operator = "";
-      secondNumber = "";
-    }
+    calculate();
   });
 });
 
@@ -67,6 +52,22 @@ that is input into the calculator when a user presses an operator,
  });
 
  function calculate(){
+  if(!operator){
+    firstNumber = displayValue;
+    console.log(firstNumber);
+  }
+  if(operator && firstNumber){
+    secondNumber = displayValue;
+    console.log(secondNumber);
+  }
+  if(operator && firstNumber  && secondNumber){
+    result = operate(operator, Number(firstNumber),Number(secondNumber));
+    screen.textContent = result;
+
+    firstNumber = result;
+    operator = "";
+    secondNumber = "";
+  }
 
  }
  //Equal Button
