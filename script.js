@@ -31,6 +31,7 @@ numberButtons.forEach(numberButton => {
       screen.textContent += numberButton.textContent;
       displayValue = screen.textContent;
     }
+
     displayValue =screen.textContent;
 
     calculate();

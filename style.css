@@ -26,8 +26,7 @@
 }
 
 .calc-body{
-  width: 300px;
-  height: 500px;
+  width: 25%;
   background-color: var(--ternary-dark);
   padding: 1rem;
   border-radius: 0.5em;
@@ -59,6 +58,9 @@
   flex-wrap: wrap;
 
 }
+#delete-btn{
+  background-color:  var(--color-red);
+}
 .clear-btn-container{
   width: 100%;
 }
@@ -89,7 +91,7 @@ button:hover{
   background-color: var(--color-red);
 } */
 
-.btn{
+.btn, .btn-inprogress{
   background-color: var(--secondary-dark);
 }
 .copy{
